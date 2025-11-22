@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   Tooltip,
   TooltipContent,
@@ -7,30 +5,17 @@ import {
 } from "@/components/ui/tooltip";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Ellipsis } from "lucide-react";
+import UserAvatar from "./user-avatar";
+import BadgeCheck from "./badge-check";
 
 export default function PostItemHeader() {
   return (
     <div className="w-full p-3 flex flex-row items-center justify-between">
       <div className="flex flex-row items-center gap-2">
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        <UserAvatar uid="1" avatar={"https://github.com/evilrabbit.png"} />
         <p className="text-sm font-semibold">cr7</p>
 
-        <Tooltip>
-          <TooltipTrigger>
-            <Image
-              src={"/badge-check.svg"}
-              width={12}
-              height={12}
-              alt="badge-check"
-            />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>已验证</p>
-          </TooltipContent>
-        </Tooltip>
+        <BadgeCheck />
 
         <Tooltip>
           <TooltipTrigger className="cursor-pointer">

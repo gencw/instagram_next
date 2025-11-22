@@ -11,7 +11,7 @@ export default function PostItemInteractions() {
         </Link>
         <Image src={"/share.svg"} alt="share" width={28} height={28} />
       </div>
-      <Image src={"/bookmark.svg"} alt="bookmark" width={32} height={32} />
+      <Image src={"/bookmark.svg"} alt="bookmark" width={28} height={28} />
     </div>
   );
 }
