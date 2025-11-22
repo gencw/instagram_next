@@ -6,7 +6,7 @@ export default function PostItemInteractions() {
     <div className="p-3 flex flex-row items-center justify-between">
       <div className="flex flex-row items-center gap-3">
         <Image src={"/like.svg"} alt="like" width={28} height={28} />
-        <Link href={"/"}>
+        <Link href={"/p/1"}>
           <Image src={"/comment.svg"} alt="comment" width={28} height={28} />
         </Link>
         <Image src={"/share.svg"} alt="share" width={28} height={28} />

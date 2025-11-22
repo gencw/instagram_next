@@ -21,8 +21,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -35,7 +37,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SplashScreen>{children}</SplashScreen>
+          <SplashScreen>
+            {children}
+            {modal}
+            <div id="modal-root" />
+          </SplashScreen>
         </ThemeProvider>
       </body>
     </html>
