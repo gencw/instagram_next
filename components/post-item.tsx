@@ -6,8 +6,8 @@ import PostItemInteractions from "./post-item-interactions";
 export default function PostItem() {
   return (
     <div className="w-full sm:w-[96%] md:w-[585px] flex flex-col">
-      <PostItemHeader />
-      <PostItemContainer />
+      <PostItemHeader uid={""} avatar={""} />
+      <PostItemContainer item={undefined} />
       <PostItemInteractions />
       <PostItemComment />
     </div>

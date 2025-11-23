@@ -16,7 +16,7 @@ export default async function PhotoModal({
       <div className="flex flex-col sm:flex-row sm:max-h-[30vh] md:max-h-[50vh] lg:max-h-[70vh] xl:max-h-[90vh] ">
         {/* 移动端：Header */}
         <div className="sm:hidden">
-          <PostItemHeader />
+          <PostItemHeader uid={""} avatar={""} />
         </div>
 
         {/* 左侧图片区域  */}
@@ -35,7 +35,7 @@ export default async function PhotoModal({
 
         <div className="hidden sm:flex sm:flex-col sm:w-[60%] md:w-[405px]  xl:w-[505px]">
           <div className="border-b">
-            <PostItemHeader />
+          <PostItemHeader uid={""} avatar={""} />
           </div>
           <div className="flex flex-col gap-4 p-4 overflow-auto">
             <PostCommentItem />

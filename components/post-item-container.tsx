@@ -1,14 +1,20 @@
+import { FeedItem } from "@/lib/utils/generateFeed";
 import Image from "next/image";
+import { faker } from "@faker-js/faker";
 
-export default function PostItemContainer() {
+interface PostItemContainerProps {
+  item: FeedItem
+}
+export default function PostItemContainer({ item }: PostItemContainerProps) {
   return (
     <Image
       quality={100}
-      width={585}
-      height={585}
+      width={470}
+      height={470}
       alt="pic"
+      className="object-contain w-full h-full"
       src={
-        "https://s1.aigei.com/src/img/jpg/88/883f9f9c8dfd4f8b99cc8abe8c997333.jpg?imageMogr2/auto-orient/thumbnail/!282x282r/gravity/Center/crop/282x282/quality/85/%7CimageView2/2/w/282&e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:UvSsaPJ453FbKHB7XmV-aIOoww8="
+        faker.image.url()
       }
     />
   );
